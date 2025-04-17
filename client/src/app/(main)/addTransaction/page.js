@@ -14,7 +14,7 @@ import { Button } from "../../../components/ui/button";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
-function addTransaction() {
+function AddTransaction() {
   const router = useRouter();
   const [errors, setErrors] = useState({});
 
@@ -157,4 +157,4 @@ function addTransaction() {
   );
 }
 
-export default addTransaction;
+export default AddTransaction;
