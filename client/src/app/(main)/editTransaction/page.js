@@ -20,7 +20,7 @@ function EditTransaction() {
   const [errors, setErrors] = useState({});
 
   const searchParams = useSearchParams();
-  const id = searchParams.get("edit");
+  const id = searchParams?.get("edit");
 
   // console.log(searchParams.get("edit"));
 
