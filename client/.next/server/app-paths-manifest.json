@@ -1,7 +1,0 @@
-{
-  "/(dashboard)/dashboard/analysis/page": "app/(dashboard)/dashboard/analysis/page.js",
-  "/(dashboard)/dashboard/page": "app/(dashboard)/dashboard/page.js",
-  "/(dashboard)/dashboard/budgetPlanning/page": "app/(dashboard)/dashboard/budgetPlanning/page.js",
-  "/(dashboard)/dashboard/monthlyExpenses/page": "app/(dashboard)/dashboard/monthlyExpenses/page.js",
-  "/(dashboard)/dashboard/detailedRecords/page": "app/(dashboard)/dashboard/detailedRecords/page.js"
-}

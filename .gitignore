@@ -14,9 +14,9 @@ yarn-error.log*
 /backend/node_modules/
 
 # Frontend specific (Next.js)
-.client/.next/
-.client/out/
-.client/node_modules/
+/client/.next/
+/client/out/
+/client/node_modules/
 
 # Optional: OS/System stuff
 Thumbs.db
