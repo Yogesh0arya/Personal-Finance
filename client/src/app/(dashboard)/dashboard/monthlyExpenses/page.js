@@ -33,7 +33,9 @@ function MonthlyExpenses() {
 
   useEffect(() => {
     async function fetchTransactions() {
-      const res = await fetch("http://localhost:8000/transactions");
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/transactions`
+      );
       const data = await res.json();
       setTransactions(data);
     }
@@ -77,7 +79,7 @@ function MonthlyExpenses() {
   return (
     <div>
       <p className="text-sm md:text-lg mb-4">
-        Here's an Monthly Expenses of all your balances.
+        Here is an Monthly Expenses of all your balances.
       </p>
 
       <Card>

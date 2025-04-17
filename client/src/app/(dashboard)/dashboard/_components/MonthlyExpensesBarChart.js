@@ -40,7 +40,9 @@ function MonthlyExpensesBarChart() {
 
   useEffect(() => {
     async function fetchTransactions() {
-      const res = await fetch("http://localhost:8000/transactions");
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/transactions`
+      );
       const data = await res.json();
       setTransactions(data);
     }

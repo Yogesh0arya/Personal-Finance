@@ -31,7 +31,7 @@ function TransactionTable({ transactions }) {
   const router = useRouter();
 
   const handleDelete = async (id) => {
-    const response = await fetch(`http://localhost:8000/transactions/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${id}`, {
       method: "DELETE",
     });
 

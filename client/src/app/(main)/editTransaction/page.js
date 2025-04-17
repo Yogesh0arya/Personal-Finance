@@ -15,7 +15,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-toastify";
 import { format } from "date-fns";
 
-function editTransaction() {
+function EditTransaction() {
   const router = useRouter();
   const [errors, setErrors] = useState({});
 
@@ -28,7 +28,9 @@ function editTransaction() {
 
   useEffect(() => {
     async function fetchTransaction() {
-      const res = await fetch(`http://localhost:8000/transactions/${id}`);
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/transactions/${id}`
+      );
       const data = await res.json();
       setTransaction(data);
 
@@ -83,13 +85,16 @@ function editTransaction() {
       date: formData.get("date"),
     };
     // console.log(data);
-    const response = await fetch(`http://localhost:8000/transactions/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(transaction),
-    });
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/transactions/${id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(transaction),
+      }
+    );
     const result = await response.json();
 
     if (response.ok) {
@@ -231,4 +236,4 @@ function editTransaction() {
   );
 }
 
-export default editTransaction;
+export default EditTransaction;

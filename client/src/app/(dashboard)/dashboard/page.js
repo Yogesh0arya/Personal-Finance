@@ -5,11 +5,14 @@ import TransactionTable from "./_components/TransactionTable";
 import MonthlyExpensesBarChart from "./_components/MonthlyExpensesBarChart";
 
 function Dashboard() {
+  // console.log(process.env.NEXT_PUBLIC_API_URL);
   const [transactions, setTransactions] = useState(null);
 
   useEffect(() => {
     async function fetchTransactions() {
-      const res = await fetch("http://localhost:8000/transactions?limit=4");
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/transactions?limit=4`
+      );
       const data = await res.json();
       setTransactions(data);
     }
@@ -20,7 +23,7 @@ function Dashboard() {
     <div>
       <div>
         <p className="text-sm md:text-lg mb-5">
-          Here's an overview of all your balances.
+          Here is an overview of all your balances.
         </p>
       </div>
 

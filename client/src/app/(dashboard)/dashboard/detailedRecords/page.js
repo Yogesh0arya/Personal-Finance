@@ -8,7 +8,9 @@ function DetailedRecords() {
 
   useEffect(() => {
     async function fetchTransactions() {
-      const res = await fetch("http://localhost:8000/transactions");
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/transactions`
+      );
       const data = await res.json();
       setTransactions(data);
     }
@@ -18,7 +20,7 @@ function DetailedRecords() {
   return (
     <div className="grid">
       <p className="text-sm md:text-lg mb-4">
-        Here's Detailed Records of all your balances.
+        Here is Detailed Records of all your balances.
       </p>
 
       <AllTransactions transactions={transactions} />

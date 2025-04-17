@@ -21,7 +21,7 @@ function BudgetPlanning() {
 
   useEffect(() => {
     async function fetchbudget() {
-      const res = await fetch("http://localhost:8000/budget");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/budget`);
       const data = await res.json();
       setBudget(data);
     }
@@ -40,7 +40,7 @@ function BudgetPlanning() {
       toast.error("Please enter a valid amount");
       return;
     }
-    const response = await fetch(`http://localhost:8000/budget/`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/budget/`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -75,7 +75,7 @@ function BudgetPlanning() {
 
   return (
     <div>
-      <p className="text-sm md:text-lg mb-5">Here's your Budget Planning.</p>
+      <p className="text-sm md:text-lg mb-5">Here is your Budget Planning.</p>
 
       <Card>
         <CardHeader className="flex items-center justify-between space-y-0 pb-7">

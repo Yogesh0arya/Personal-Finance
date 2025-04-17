@@ -31,9 +31,12 @@ function AllTransactions({ transactions }) {
   const router = useRouter();
 
   const handleDelete = async (id) => {
-    const response = await fetch(`http://localhost:8000/transactions/${id}`, {
-      method: "DELETE",
-    });
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}//transactions/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
 
     if (response.ok) {
       toast.success("Transaction has been deleted");
