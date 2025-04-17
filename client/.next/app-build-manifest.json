@@ -1,0 +1,51 @@
+{
+  "pages": {
+    "/(dashboard)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/layout.css",
+      "static/chunks/app/(dashboard)/layout.js"
+    ],
+    "/(dashboard)/dashboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/dashboard/page.js"
+    ],
+    "/(main)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(main)/layout.css",
+      "static/chunks/app/(main)/layout.js"
+    ],
+    "/(main)/addTransaction/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(main)/addTransaction/page.js"
+    ],
+    "/(dashboard)/dashboard/detailedRecords/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/dashboard/detailedRecords/page.js"
+    ],
+    "/(main)/editTransaction/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(main)/editTransaction/page.js"
+    ],
+    "/(dashboard)/dashboard/analysis/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/dashboard/analysis/page.js"
+    ],
+    "/(dashboard)/dashboard/budgetPlanning/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/dashboard/budgetPlanning/page.js"
+    ],
+    "/(dashboard)/dashboard/monthlyExpenses/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/dashboard/monthlyExpenses/page.js"
+    ]
+  }
+}
