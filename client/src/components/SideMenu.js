@@ -9,7 +9,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { ChevronsDown, ChevronsUp } from "lucide-react";
+import {
+  ChevronsDown,
+  ChevronsUp,
+  HandCoins,
+  LayoutDashboard,
+  LibraryBig,
+  LogOut,
+  PiggyBank,
+  Settings,
+} from "lucide-react";
 
 function SideMenu() {
   const [open, setOpen] = useState(false);
@@ -25,40 +34,46 @@ function SideMenu() {
             href="/dashboard"
             className={`${
               pathname == "/dashboard" && "bg-green-700"
-            } hover:bg-green-100 rounded-sm p-2 text-start hover:text-black`}
+            } hover:bg-green-100 rounded-sm p-2 text-start hover:text-black flex items-center gap-2`}
           >
+            <LayoutDashboard />
             Overview
           </Link>
           <Link
             href="/dashboard/detailedRecords"
             className={`${
               pathname == "/dashboard/detailedRecords" && "bg-green-700"
-            } hover:bg-green-100 rounded-sm p-2 text-start hover:text-black`}
+            } hover:bg-green-100 rounded-sm p-2 text-start hover:text-black flex items-center gap-2`}
           >
+            <LibraryBig />
             Detailed Records
           </Link>
           <Link
             href="/dashboard/monthlyExpenses"
             className={`${
               pathname == "/dashboard/monthlyExpenses" && "bg-green-700"
-            } hover:bg-green-100 rounded-sm p-2 text-start hover:text-black`}
+            } hover:bg-green-100 rounded-sm p-2 text-start hover:text-black flex items-center gap-2`}
           >
+            <HandCoins />
             Monthly Expenses
           </Link>
           <Link
             href="/dashboard/budgetPlanning"
             className={`${
               pathname == "/dashboard/budgetPlanning" && "bg-green-700"
-            } hover:bg-green-100 rounded-sm p-2 text-start hover:text-black`}
+            } hover:bg-green-100 rounded-sm p-2 text-start hover:text-black flex items-center gap-2`}
           >
+            <PiggyBank />
             Budget Planning
           </Link>
         </div>
         <div className="flex flex-col gap-2">
-          <button className="cursor-pointer hover:bg-green-100 rounded-sm p-2 text-start hover:text-black">
+          <button className="cursor-pointer hover:bg-green-100 rounded-sm p-2 text-start hover:text-black flex items-center gap-2">
+            <Settings />
             Settings
           </button>
-          <button className="cursor-pointer hover:bg-green-100 rounded-sm p-2 text-start hover:text-black">
+          <button className="cursor-pointer hover:bg-green-100 rounded-sm p-2 text-start hover:text-black flex items-center gap-2">
+            <LogOut />
             Logout
           </button>
         </div>
